@@ -1,10 +1,12 @@
 import React from 'react';
-import {Grid} from '@mui/material'
+import {Grid, TextField} from '@mui/material'
 
 const InputAmount = () => {
     return (
         <div>
-            <Grid item>Item 1</Grid>
+            <Grid item>
+                <TextField label="Amount" fullWidth InputProps={{type:"number"}} />
+            </Grid>
         </div>
     );
 };
