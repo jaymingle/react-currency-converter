@@ -7,7 +7,7 @@ const InputAmount = () => {
             <Grid item>
                 <TextField label="Amount" fullWidth InputProps={{
                     type:"number",
-                    startAdornment: <InputAdornment>$</InputAdornment>
+                    startAdornment: <InputAdornment position={"start"}>$</InputAdornment>
                 }} />
             </Grid>
         </div>
