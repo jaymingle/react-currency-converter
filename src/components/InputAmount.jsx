@@ -1,11 +1,14 @@
 import React from 'react';
-import {Grid, TextField} from '@mui/material'
+import {Grid, InputAdornment, TextField} from '@mui/material'
 
 const InputAmount = () => {
     return (
         <div>
             <Grid item>
-                <TextField label="Amount" fullWidth InputProps={{type:"number"}} />
+                <TextField label="Amount" fullWidth InputProps={{
+                    type:"number",
+                    startAdornment: <InputAdornment>$</InputAdornment>
+                }} />
             </Grid>
         </div>
     );
