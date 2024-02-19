@@ -12,8 +12,7 @@ function App() {
         <Grid container spacing={3}>
             <InputAmount/>
             <SelectCountry/>
-            <Grid item>Item 3</Grid>
-            <Grid item>Item 4</Grid>
+            <SelectCountry/>
         </Grid>
     </Container>
   )
