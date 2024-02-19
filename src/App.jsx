@@ -13,9 +13,7 @@ function App() {
                    background: "#fdfdfd",
                    display: "flex",
                    flexDirection: "column",
-                   gap: "20px",
-                   alignItems: "space-between",
-                   justifyContent: "space-between",
+                   gap: 5,
     }}>
         <Typography variant="h5" sx={{marginTop: "2rem", marginBottom: "2rem"}}> Get Accurate Conversions on the Go </Typography>
         <Grid container spacing={1} sx={{marginTop: "2px", marginLeft: "2px"}}>
