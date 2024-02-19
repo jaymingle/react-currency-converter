@@ -1,12 +1,18 @@
 import { useState } from 'react'
 import './App.css'
-import {Button, Container} from "@mui/material";
+import {Button, Container, Grid, Typography} from "@mui/material";
 
 function App() {
 
   return (
-    <Container maxWidth="md" sx={{background: "red"}}>
-      <Button variant="contained">Click Me</Button>
+    <Container maxWidth="md" sx={{background: "#fdfdfd"}}>
+        <Typography variant="h5" sx={{marginTop: "2rem"}}> Get Accurate Conversions on the Go </Typography>
+        <Grid container spacing={3}>
+            <Grid item>Item 1</Grid>
+            <Grid item>Item 2</Grid>
+            <Grid item>Item 3</Grid>
+            <Grid item>Item 4</Grid>
+        </Grid>
     </Container>
   )
 }
