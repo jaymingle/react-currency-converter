@@ -3,6 +3,7 @@ import './App.css'
 import {Button, Container, Grid, Typography} from "@mui/material";
 import InputAmount from "./components/InputAmount.jsx";
 import SelectCountry from "./components/SelectCountry.jsx";
+import SwitchCurrency from "./components/SwitchCurrency.jsx";
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
         <Grid container spacing={3}>
             <InputAmount/>
             <SelectCountry/>
+            <SwitchCurrency/>
             <SelectCountry/>
         </Grid>
     </Container>
