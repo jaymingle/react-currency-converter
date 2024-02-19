@@ -8,9 +8,9 @@ import SwitchCurrency from "./components/SwitchCurrency.jsx";
 function App() {
 
   return (
-    <Container maxWidth="md" sx={{background: "#fdfdfd"}}>
+    <Container maxWidth="md" sx={{background: "red"}}>
         <Typography variant="h5" sx={{marginTop: "2rem"}}> Get Accurate Conversions on the Go </Typography>
-        <Grid container spacing={3}>
+        <Grid container spacing={2} marginTop={""}>
             <InputAmount/>
             <SelectCountry/>
             <SwitchCurrency/>
