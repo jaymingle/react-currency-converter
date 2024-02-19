@@ -1,10 +1,12 @@
 import React from 'react';
-import {Grid} from "@mui/material";
+import {Autocomplete, Grid} from "@mui/material";
 
 const SelectCountry = () => {
     return (
         <div>
-            <Grid item>Item 2</Grid>
+            <Grid item>
+                <Autocomplete xs={{}} value='Option1'  options={['Option 1', 'Option 2', 'Option 3']}/>
+            </Grid>
         </div>
     );
 };
