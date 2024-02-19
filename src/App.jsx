@@ -11,12 +11,9 @@ function App() {
     <Container maxWidth="md"
                sx={{
                    background: "#fdfdfd",
-                   display: "flex",
-                   flexDirection: "column",
-                   gap: 5,
     }}>
         <Typography variant="h5" sx={{marginTop: "2rem", marginBottom: "2rem"}}> Get Accurate Conversions on the Go </Typography>
-        <Grid container spacing={1} sx={{marginTop: "2px", marginLeft: "2px"}}>
+        <Grid container spacing={2} sx={{marginTop: "2px", marginLeft: "2px"}}>
             <InputAmount/>
             <SelectCountry/>
             <SwitchCurrency/>

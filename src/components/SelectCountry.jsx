@@ -3,16 +3,16 @@ import {Autocomplete, Grid, TextField} from "@mui/material";
 
 const SelectCountry = () => {
     return (
-        <div>
-            <Grid item sx={{maxWidth: "250px", minWidth: "180px"}}>
+            <Grid item xs={12}>
                 <Autocomplete
+                    disablePortal
+                    id="combo-box-demo"
                     value='Option1'
                     options={['Option 1', 'Option 2', 'Option 3']}
                     renderInput={(params) => (
-                        <TextField {...params} label="From" variant="standard" />
-                    )}                />
+                        <TextField {...params} label="From"/>
+                    )} />
             </Grid>
-        </div>
     );
 };
 
