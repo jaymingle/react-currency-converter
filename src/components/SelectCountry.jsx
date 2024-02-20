@@ -9,6 +9,7 @@ const SelectCountry = () => {
 
     const dataFilter = data.filter(item => "currencies" in item)
     console.log(dataFilter)
+    const dataCountry = dataFilter.map(country => `${country.flag} ${Object.keys(country.currencies[0])} - ${country.name.common}`)
 
     return (
             <Grid item xs={12} md={3}>
