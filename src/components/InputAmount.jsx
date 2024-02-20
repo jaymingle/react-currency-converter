@@ -8,7 +8,7 @@ const InputAmount = () => {
 
     return (
             <Grid item xs={12} md>
-                <TextField  label="Amount" fullWidth InputProps={{
+                <TextField value={firstAmount} onChange={e => setFirstAmount(e.target.value)} label="Amount" fullWidth InputProps={{
                     type:"number",
                     startAdornment: <InputAdornment position={"start"}>$</InputAdornment>
                 }} />
