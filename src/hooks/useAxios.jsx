@@ -26,6 +26,7 @@ const UseAxios = (url) => {
         fetchData();
 
     }, [url])
+    return [data, error, loaded]
 
     return (
         <div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Autocomplete, Grid, TextField} from "@mui/material";
-import useAxios from "../hooks/useAxios.jsx";
+import useAxios from "../hooks/useAxios";
 
 const SelectCountry = () => {
 
