@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import axios from "axios";
 
 const Axios = ({url}) => {
 
@@ -12,10 +13,12 @@ const Axios = ({url}) => {
 
             try{
                 setLoaded(true)
+                const response = await axios(url)
+                setData(response.data)
             }catch(e){
-
+                setError(e)
             }finally{
-
+                setLoaded(false)
             }
 
         }
