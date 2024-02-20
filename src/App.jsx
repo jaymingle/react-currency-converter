@@ -10,7 +10,7 @@ import axios from "axios";
 
 function App() {
 
-    const API_KEY = "fca_live_vFm6HjmSBa94OwnTSjam8djhUzHDkpIiqWGJtXiC"
+    const API_KEY = import.meta.env.VITE_API_KEY
 
     const {
         fromCurrency,
@@ -43,7 +43,7 @@ function App() {
                 .catch(error => console.log(error))
         }
 
-    }, [firstAmount]);
+    }, [firstAmount, fromCurrency, toCurrency]);
     
 
     const BoxStyles ={
