@@ -1,6 +1,6 @@
 import {useContext, useState, useEffect} from 'react'
 import './App.css'
-import {Button, Container, Grid, Typography} from "@mui/material";
+import {Box, Button, Container, Grid, Typography} from "@mui/material";
 import InputAmount from "./components/InputAmount.jsx";
 import SelectCountry from "./components/SelectCountry.jsx";
 import SwitchCurrency from "./components/SwitchCurrency.jsx";
@@ -22,12 +22,12 @@ function App() {
     } = useContext(CurrencyContext);
 
     const [resultCurrency, setResultCurrency] = useState(0)
-    console.log(resultCurrency)
+    // console.log(resultCurrency)
 
     const codeFromCurrency = fromCurrency.split(" ")[1]
     const codeToCurrency = toCurrency.split(" ")[1]
-    console.log(codeFromCurrency)
-    console.log(codeToCurrency)
+    // console.log(codeFromCurrency)
+    // console.log(codeToCurrency)
 
     useEffect(() => {
 
@@ -35,11 +35,11 @@ function App() {
             axios("https://api.freecurrencyapi.com/v1/latest", {
                 params: {
                     apikey: API_KEY,
-                    base_currrency: codeFromCurrency,
+                    base_currency: codeFromCurrency,
                     currencies: codeToCurrency
                 }
             })
-                .then(response => setResultCurrency(response.data.data))
+                .then(response => setResultCurrency(response.data.data[codeToCurrency]))
                 .catch(error => console.log(error))
         }
 
@@ -67,6 +67,11 @@ function App() {
             <SwitchCurrency/>
             <SelectCountry value={toCurrency} setValue={setToCurrency} label={"To"}/>
         </Grid>
+
+
+        {firstAmount ? (<Box/>) : ""}
+
+
     </Container>
   )
 }
