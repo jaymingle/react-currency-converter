@@ -27,9 +27,9 @@ function App() {
         <Typography variant="h5" sx={{marginTop: "2rem", marginBottom: "2rem"}}> Get Accurate Conversions on the Go </Typography>
         <Grid container spacing={2}>
             <InputAmount/>
-            <SelectCountry value={fromCurrency} setValue={setFromCurrency}/>
+            <SelectCountry value={fromCurrency} setValue={setFromCurrency} label={"From"}/>
             <SwitchCurrency/>
-            <SelectCountry value={toCurrency} setValue={setToCurrency()}/>
+            <SelectCountry value={toCurrency} setValue={setToCurrenc} label={"To"}/>
         </Grid>
     </Container>
   )
