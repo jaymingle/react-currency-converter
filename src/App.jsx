@@ -5,6 +5,7 @@ import InputAmount from "./components/InputAmount.jsx";
 import SelectCountry from "./components/SelectCountry.jsx";
 import SwitchCurrency from "./components/SwitchCurrency.jsx";
 import {CurrencyContext} from "./context/CurrencyContext";
+import axios from "axios";
 
 
 function App() {
@@ -20,12 +21,20 @@ function App() {
         setFirstAmount,
     } = useContext(CurrencyContext);
 
-    console.log(firstAmount)
+    const [resultCurrency, setResultCurrency] = useState(0)
 
     useEffect(() => {
 
         if(firstAmount){
-
+            axios("https://api.freecurrencyapi.com/v1/latest", {
+                params: {
+                    API_KEY,
+                    base_currrency: "USD",
+                    currencies: "IDR"
+                }
+            })
+                .then(response => setResultCurrency(response.data))
+                .catch(error => console.log(error))
         }
 
     }, [firstAmount]);
