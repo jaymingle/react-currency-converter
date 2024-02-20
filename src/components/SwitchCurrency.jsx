@@ -13,7 +13,8 @@ const SwitchCurrency = () => {
     } = useContext(CurrencyContext)
 
     const switchCurrencyHandler = () => {
-
+        setFromCurrrency(toCurrency)
+        setToCurrrency(fromCurrency)
     }
 
     return (
