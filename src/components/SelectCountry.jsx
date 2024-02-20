@@ -3,7 +3,7 @@ import {Autocomplete, Grid, TextField} from "@mui/material";
 
 const SelectCountry = () => {
     return (
-            <Grid item xs={12}>
+            <Grid item xs={12} md={3}>
                 <Autocomplete
                     disablePortal
                     id="combo-box-demo"
