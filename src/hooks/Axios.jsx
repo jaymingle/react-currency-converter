@@ -23,6 +23,8 @@ const Axios = ({url}) => {
 
         }
 
+        fetchData();
+
     }, [url])
 
     return (
