@@ -1,9 +1,11 @@
 import React from 'react';
-import {Grid} from "@mui/material";
+import {Button, Grid} from "@mui/material";
 
 const SwitchCurrency = () => {
     return (
-            <Grid item>Item 3</Grid>
+            <Grid item>
+                <Button></Button>
+            </Grid>
     );
 };
 
