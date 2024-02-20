@@ -69,18 +69,13 @@ function App() {
         </Grid>
 
 
-        {
-            firstAmount ? (<Box>
-                <Typography>
-                    {firstAmount} {fromCurrency}
-                </Typography>
-                <Box/>) : ""
-
-        }
-
+        {firstAmount ? (<Box>
+                    <Typography>{firstAmount} {fromCurrency} =</Typography>
+                    <Typography>{resultCurrency} {toCurrency}</Typography>
+                    <Box/>) : ""}
 
     </Container>
-  )
+   )
 }
 
 export default App
