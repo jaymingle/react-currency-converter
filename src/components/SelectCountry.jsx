@@ -5,7 +5,7 @@ import useAxios from "../hooks/useAxios";
 const SelectCountry = () => {
 
     const [data] = useAxios('https://restcountries.com/v3.1/all')
-    console.log(data)
+    console.log(data.altSpellings)
 
     return (
             <Grid item xs={12} md={3}>
