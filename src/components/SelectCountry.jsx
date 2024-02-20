@@ -5,7 +5,10 @@ import useAxios from "../hooks/useAxios";
 const SelectCountry = () => {
 
     const [data] = useAxios('https://restcountries.com/v3.1/all')
-    console.log(data.altSpellings)
+    console.log(data)
+
+    const dataFilter = data.filter(item => "currencies" in item)
+    console.log(dataFilter)
 
     return (
             <Grid item xs={12} md={3}>
