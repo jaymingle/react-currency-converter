@@ -27,10 +27,11 @@ const SelectCountry = ({value, setValue, label}) => {
                 <Autocomplete
                     disablePortal
                     id="combo-box-demo"
-                    value='Option1'
+                    value={value}
+                    onChange={(event, newValue) => setValue(newValue)}
                     options={dataCountry}
                     renderInput={(params) => (
-                        <TextField {...params} label="From"/>
+                        <TextField {...params} label={label}/>
                     )} />
             </Grid>
     );
