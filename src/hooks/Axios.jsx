@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 
-const Axios = () => {
+const Axios = ({url}) => {
 
     const [data, setData] = useState([])
     const [error, setError] = useState(null)
@@ -8,7 +8,17 @@ const Axios = () => {
 
     useEffect(() => {
 
-    }, [])
+        const fetchData = async () => {
+            try{
+                setLoaded(true)
+            }catch(e){
+
+            }finally{
+
+            }
+        }
+
+    }, [url])
 
     return (
         <div>
