@@ -24,17 +24,22 @@ function App() {
     const [resultCurrency, setResultCurrency] = useState(0)
     console.log(resultCurrency)
 
+    const codeFromCurrency = fromCurrency.split(" ")[1]
+    const codeToCurrency = toCurrency.split(" ")[1]
+    console.log(codeFromCurrency)
+    console.log(codeToCurrency)
+
     useEffect(() => {
 
         if(firstAmount){
             axios("https://api.freecurrencyapi.com/v1/latest", {
                 params: {
-                    API_KEY,
-                    base_currrency: "USD",
-                    currencies: "IDR"
+                    apikey: API_KEY,
+                    base_currrency: codeFromCurrency,
+                    currencies: codeToCurrency
                 }
             })
-                .then(response => setResultCurrency(response.data))
+                .then(response => setResultCurrency(response.data.data))
                 .catch(error => console.log(error))
         }
 
