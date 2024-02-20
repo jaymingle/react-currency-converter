@@ -7,6 +7,13 @@ const CurrencyProvider = ({children}) => {
     const [fromCurrency, setFromCurrency] = useState("")
     const [toCurrency, setToCurrency] = useState("")
 
+    const value ={
+        fromCurrency,
+        setFromCurrency,
+        toCurrency,
+        setToCurrency
+    }
+
     return (
         <CurrencyContext.Provider value={value}>
             {children}
