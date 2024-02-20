@@ -69,7 +69,14 @@ function App() {
         </Grid>
 
 
-        {firstAmount ? (<Box/>) : ""}
+        {
+            firstAmount ? (<Box>
+                <Typography>
+                    {firstAmount} {fromCurrency}
+                </Typography>
+                <Box/>) : ""
+
+        }
 
 
     </Container>
