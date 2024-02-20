@@ -29,7 +29,7 @@ function App() {
             <InputAmount/>
             <SelectCountry value={fromCurrency} setValue={setFromCurrency} label={"From"}/>
             <SwitchCurrency/>
-            <SelectCountry value={toCurrency} setValue={setToCurrenc} label={"To"}/>
+            <SelectCountry value={toCurrency} setValue={setToCurrency} label={"To"}/>
         </Grid>
     </Container>
   )

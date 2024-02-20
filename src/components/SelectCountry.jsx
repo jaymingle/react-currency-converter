@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Autocomplete, Grid, Skeleton, TextField} from "@mui/material";
 import useAxios from "../hooks/useAxios";
 
-const SelectCountry = () => {
+const SelectCountry = ({value, setValue, label}) => {
 
     const [data, loaded, error] = useAxios('https://restcountries.com/v3.1/all')
     if(loaded){
