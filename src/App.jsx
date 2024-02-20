@@ -4,7 +4,7 @@ import {Button, Container, Grid, Typography} from "@mui/material";
 import InputAmount from "./components/InputAmount.jsx";
 import SelectCountry from "./components/SelectCountry.jsx";
 import SwitchCurrency from "./components/SwitchCurrency.jsx";
-import CurrencyContext from "./context/CurrencyContext.jsx";
+import {CurrencyContext} from "./context/CurrencyContext";
 
 
 function App() {
