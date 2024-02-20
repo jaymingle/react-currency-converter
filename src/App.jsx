@@ -4,11 +4,18 @@ import {Button, Container, Grid, Typography} from "@mui/material";
 import InputAmount from "./components/InputAmount.jsx";
 import SelectCountry from "./components/SelectCountry.jsx";
 import SwitchCurrency from "./components/SwitchCurrency.jsx";
+import currencyContext from "./context/CurrencyContext.jsx";
+
 
 function App() {
 
-    const [fromCurrency, setFromCurrency] = useState("")
-    const [toCurrency, setToCurrency] = useState("")
+    const {
+        fromCurrency,
+        setFromCurrency,
+        toCurrency,
+        setToCurrency
+    } =
+    const context = useContext(currencyContext);
 
     const BoxStyles ={
         background: "#fdfdfd",
