@@ -1,7 +1,12 @@
 import React from 'react';
 import {Autocomplete, Grid, TextField} from "@mui/material";
+import useAxios from "../hooks/useAxios.jsx";
 
 const SelectCountry = () => {
+
+    const [data] = useAxios('https://restcountries.com/v3.1/all')
+    console.log(data)
+
     return (
             <Grid item xs={12} md={3}>
                 <Autocomplete

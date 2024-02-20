@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from "axios";
 
-const Axios = ({url}) => {
+const UseAxios = (url) => {
 
     const [data, setData] = useState([])
     const [error, setError] = useState(null)
@@ -34,4 +34,4 @@ const Axios = ({url}) => {
     );
 };
 
-export default Axios;
+export default UseAxios;
