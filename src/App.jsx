@@ -1,10 +1,10 @@
-import { useState } from 'react'
+import {useContext, useState} from 'react'
 import './App.css'
 import {Button, Container, Grid, Typography} from "@mui/material";
 import InputAmount from "./components/InputAmount.jsx";
 import SelectCountry from "./components/SelectCountry.jsx";
 import SwitchCurrency from "./components/SwitchCurrency.jsx";
-import currencyContext from "./context/CurrencyContext.jsx";
+import CurrencyContext from "./context/CurrencyContext.jsx";
 
 
 function App() {
@@ -14,8 +14,7 @@ function App() {
         setFromCurrency,
         toCurrency,
         setToCurrency
-    } =
-    const context = useContext(currencyContext);
+    } = useContext(CurrencyContext);
 
     const BoxStyles ={
         background: "#fdfdfd",
