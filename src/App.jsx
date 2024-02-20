@@ -1,4 +1,4 @@
-import {useContext, useState} from 'react'
+import {useContext, useState, useEffect} from 'react'
 import './App.css'
 import {Button, Container, Grid, Typography} from "@mui/material";
 import InputAmount from "./components/InputAmount.jsx";
@@ -13,8 +13,15 @@ function App() {
         fromCurrency,
         setFromCurrency,
         toCurrency,
-        setToCurrency
+        setToCurrency,
+        firstAmount,
+        setFirstAmount,
     } = useContext(CurrencyContext);
+
+    useEffect(() => {
+
+    }, [firstAmount]);
+    
 
     const BoxStyles ={
         background: "#fdfdfd",

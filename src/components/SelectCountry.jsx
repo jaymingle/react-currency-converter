@@ -23,9 +23,10 @@ const SelectCountry = ({value, setValue, label}) => {
     const dataCountry = dataFilter.map(country => `${country.flag} ${Object.keys(country.currencies)[0]} - ${country.name.common}`)
     // console.log(dataCountry)
     return (
-            <Grid item xs={12} md={3}>
+            <Grid item xs={12} md={3.5}>
                 <Autocomplete
                     disablePortal
+                    disableClearable
                     id="combo-box-demo"
                     value={value}
                     onChange={(event, newValue) => setValue(newValue)}

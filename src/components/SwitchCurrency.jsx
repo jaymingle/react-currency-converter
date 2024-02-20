@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import {Button, Grid} from "@mui/material";
 import CompareArrowsIcon from '@mui/icons-material/CompareArrows';
-import {CurrencyContext} from "../context/CurrencyContext.jsx";
+import {CurrencyContext} from "../context/CurrencyContext";
 
 const SwitchCurrency = () => {
 
@@ -13,16 +13,16 @@ const SwitchCurrency = () => {
     } = useContext(CurrencyContext)
 
     const switchCurrencyHandler = () => {
-        setFromCurrrency(toCurrency)
-        setToCurrrency(fromCurrency)
+        setFromCurrency(toCurrency)
+        setToCurrency(fromCurrency)
     }
 
     return (
             <Grid item xs={12} md={"auto"}>
-                <Button sx={{
+                <Button onClick={switchCurrencyHandler} sx={{
                     borderRadius: 1,
                     height: '100%',
-                }} onClick={switchCurrencyHandler}>
+                }}>
                     <CompareArrowsIcon sx={{
                         fontSize: 30
                     }}/>
