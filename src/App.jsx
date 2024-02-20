@@ -69,6 +69,15 @@ function App() {
               <SelectCountry value={toCurrency} setValue={setToCurrency} label={"To"}/>
           </Grid>
 
-          );
-      };
-export default App;
+          {firstAmount ? (
+              <Box>
+                  <Typography>{firstAmount} {fromCurrency} =</Typography>
+                  <Typography>{resultCurrency} {toCurrency}</Typography>
+              </Box>
+          ) : " "}
+
+      </Container>
+
+          )
+      }
+export default App
