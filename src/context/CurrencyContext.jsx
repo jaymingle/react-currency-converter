@@ -4,8 +4,8 @@ export const CurrencyContext = createContext()
 
 const CurrencyProvider = ({children}) => {
 
-    const [fromCurrency, setFromCurrency] = useState("")
-    const [toCurrency, setToCurrency] = useState("")
+    const [fromCurrency, setFromCurrency] = useState("🇺🇸 USD - United States")
+    const [toCurrency, setToCurrency] = useState("🇬🇭 GHS - Ghana")
 
     const value ={
         fromCurrency,
