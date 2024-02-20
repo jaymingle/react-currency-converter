@@ -18,6 +18,8 @@ function App() {
         setFirstAmount,
     } = useContext(CurrencyContext);
 
+    console.log(firstAmount)
+
     useEffect(() => {
 
     }, [firstAmount]);
