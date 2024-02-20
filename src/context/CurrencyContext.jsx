@@ -6,7 +6,7 @@ const CurrencyProvider = ({children}) => {
 
     const [fromCurrency, setFromCurrency] = useState("🇺🇸 USD - United States")
     const [toCurrency, setToCurrency] = useState("🇬🇭 GHS - Ghana")
-    const [firstAmount, setFirstAmount] = useState(0)
+    const [firstAmount, setFirstAmount] = useState("")
 
     const value ={
         fromCurrency,

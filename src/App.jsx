@@ -9,6 +9,8 @@ import {CurrencyContext} from "./context/CurrencyContext";
 
 function App() {
 
+    const API_KEY = "fca_live_vFm6HjmSBa94OwnTSjam8djhUzHDkpIiqWGJtXiC"
+
     const {
         fromCurrency,
         setFromCurrency,
@@ -21,6 +23,10 @@ function App() {
     console.log(firstAmount)
 
     useEffect(() => {
+
+        if(firstAmount){
+
+        }
 
     }, [firstAmount]);
     
