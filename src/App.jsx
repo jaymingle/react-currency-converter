@@ -59,23 +59,16 @@ function App() {
     }
 
   return (
-    <Container maxWidth="md" sx={BoxStyles}>
-        <Typography variant="h5" sx={{marginTop: "2rem", marginBottom: "2rem"}}> Get Accurate Conversions on the Go </Typography>
-        <Grid container spacing={2}>
-            <InputAmount/>
-            <SelectCountry value={fromCurrency} setValue={setFromCurrency} label={"From"}/>
-            <SwitchCurrency/>
-            <SelectCountry value={toCurrency} setValue={setToCurrency} label={"To"}/>
-        </Grid>
 
+      <Container maxWidth="md" sx={BoxStyles}>
+          <Typography variant="h5" sx={{marginTop: "2rem", marginBottom: "2rem"}}> Get Accurate Conversions on the Go </Typography>
+          <Grid container spacing={2}>
+              <InputAmount/>
+              <SelectCountry value={fromCurrency} setValue={setFromCurrency} label={"From"}/>
+              <SwitchCurrency/>
+              <SelectCountry value={toCurrency} setValue={setToCurrency} label={"To"}/>
+          </Grid>
 
-        {firstAmount ? (<Box>
-                    <Typography>{firstAmount} {fromCurrency} =</Typography>
-                    <Typography>{resultCurrency} {toCurrency}</Typography>
-                    <Box/>) : ""}
-
-    </Container>
-   )
-}
-
-export default App
+          );
+      };
+export default App;
