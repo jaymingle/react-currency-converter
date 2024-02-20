@@ -7,6 +7,9 @@ import SwitchCurrency from "./components/SwitchCurrency.jsx";
 
 function App() {
 
+    const [fromCurrency, setFromCurrency] = useState("")
+    const [toCurrency, setToCurrency] = useState("")
+
     const BoxStyles ={
         background: "#fdfdfd",
         textAlign: "center",
@@ -24,9 +27,9 @@ function App() {
         <Typography variant="h5" sx={{marginTop: "2rem", marginBottom: "2rem"}}> Get Accurate Conversions on the Go </Typography>
         <Grid container spacing={2}>
             <InputAmount/>
-            <SelectCountry/>
+            <SelectCountry value={fromCurrency}/>
             <SwitchCurrency/>
-            <SelectCountry/>
+            <SelectCountry value={toCurrency}/>
         </Grid>
     </Container>
   )
