@@ -9,6 +9,7 @@ const Axios = ({url}) => {
     useEffect(() => {
 
         const fetchData = async () => {
+
             try{
                 setLoaded(true)
             }catch(e){
@@ -16,6 +17,7 @@ const Axios = ({url}) => {
             }finally{
 
             }
+
         }
 
     }, [url])
