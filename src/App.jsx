@@ -22,6 +22,7 @@ function App() {
     } = useContext(CurrencyContext);
 
     const [resultCurrency, setResultCurrency] = useState(0)
+    console.log(resultCurrency)
 
     useEffect(() => {
 
