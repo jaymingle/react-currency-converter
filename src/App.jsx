@@ -70,9 +70,9 @@ function App() {
           </Grid>
 
           {firstAmount ? (
-              <Box>
+              <Box sx={{textAlign: "left", marginTop: "1 rem" }}>
                   <Typography>{firstAmount} {fromCurrency} =</Typography>
-                  <Typography>{resultCurrency} {toCurrency}</Typography>
+                  <Typography variant='h5' sx={{marginTop: "5px", fontWeight: "bold"}}>{resultCurrency * firstAmount} {toCurrency}</Typography>
               </Box>
           ) : " "}
 
